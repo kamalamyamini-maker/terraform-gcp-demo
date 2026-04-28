@@ -12,12 +12,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 🔐 Authenticate using JSON key from GitHub Secrets
-      - name: Authenticate to GCP
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.GITHUB_SA_KEY }}
-
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 

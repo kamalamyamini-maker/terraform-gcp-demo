@@ -4,12 +4,12 @@ provider "google" {
   zone    = "us-central1-a"
 }
 
-provider "google_service_account" "default" {
+provider "google_service_account" {
   account_id   = "terraform-sa"
   display_name = "Terraform Service Account"
 }
 
-provider "google_service_account_key" "default" {
+provider "google_service_account_key" {
   service_account_id = google_service_account.default.name
 }
 
